@@ -1,3 +1,6 @@
 Hello {{user.username}}
-Welcome to My-Trainer
-We have just seen you have signed up for our application and want to welcome you to the family. Please enjoy .
+Welcome to My-Trainer App
+We have just seen you have signed up for our application and want to welcome you to the family. Please enjoy elaborate fitness training schedules and diet consultancy reports.
+Add compliments which we can use to improve in the next application upgrade.
+
+Welcome  {{user.username}} and Stay Fit!
