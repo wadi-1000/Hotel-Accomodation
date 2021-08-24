@@ -1,4 +1,4 @@
-#!/home/kinyae/Documents/Moringa-School-Projects/python/Flask/kins-pitch/venv/bin/python3.9
+#!/home/moringa/Documents/My-Trainer/venv/bin/python
 
 import sys
 from os.path import join, dirname, exists

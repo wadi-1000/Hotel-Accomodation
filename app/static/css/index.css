@@ -9,7 +9,7 @@
 
 #body1 {
     font-family: 'Besley', serif;
-    background-color: #062a78; 
+    background-color: #fcfcfd; 
     color: #fff;
     font-weight: bold;
     padding-bottom: 40px;
@@ -21,9 +21,9 @@
 
 }
 
-.com_name {
+/* .com_name {
     color: green;
-}
+} */
 
 .cat_btn {
     float: right;
