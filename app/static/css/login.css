@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Besley&display=swap');
-
 .center {
     font-family: 'Besley', serif;
     position: absolute;
     background-color: #0e0f10;
-    margin-left: 20%;
+    margin-left: 10%;
     width: 50%;
     padding: 10px;
     color: rgb(248, 244, 244);
-  }
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+
 .login-btn {
     margin-left: 40%;
 }
