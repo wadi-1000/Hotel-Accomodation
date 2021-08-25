@@ -1,0 +1,19 @@
+{% macro displayExercisesList(exercises_list) %}
+
+    {% for exercises in exercises_list %}
+    <div class="card">
+
+    <div class="col-md-5" >
+        <strong style="color: rgb(73, 71, 71);">{{exercises.name}}</strong>
+        </div>
+        <div class="col-md-7">
+        <p><em>{{exercises.description}}</em></p>
+        <p> category: {{exercises.category}}</p>
+        <p> category: {{exercises.muscles}}</p>
+        <p> category: {{exercises.equipment}}</p>
+        <br><br>
+    </div>
+    {% endfor %}
+
+{% endmacro %}
+
