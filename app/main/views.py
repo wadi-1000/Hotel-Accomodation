@@ -10,8 +10,8 @@ import markdown2
 @main.route('/')
 def index():
 
-    
-    return render_template('index.html')
+    title = 'My Trainer'
+    return render_template('index.html', title = title)
 
 
 @main.route('/user/<uname>')
@@ -55,7 +55,8 @@ def update_pic(uname):
 
 @main.route('/api')
 def api():
-
-    
-    return render_template('api.html')  
+    exercises = get_exercises()
+    print(exercises)
+    title ='My Trainer'
+    return render_template('api.html', title = title , exercises = exercises)  
 
