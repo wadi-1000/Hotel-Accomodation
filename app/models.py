@@ -43,6 +43,17 @@ class Role(db.Model):
     def __repr__(self):
         return f'User {self.name}'   
     
+class ExerciseInfo:
+    '''
+    Exercise info class to define exercise objects
+    '''
+    def __init__(self,id,name,description,category,muscles,equipment):
+        self.id = id
+        self.title = title
+        self.description = description
+        self.category = category
+        self.muscles = muscles
+        self.equipment = equipment
 
        
 
