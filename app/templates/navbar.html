@@ -1,4 +1,4 @@
-<div class="navbar " role="navigation">
+<div class="navbar p-4" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -11,18 +11,24 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav" style=" color: maroon; ">
-                <li><a href="/"> Home </a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    {% if current_user.is_authenticated %}
-                    <li style="color:white;padding:15px;">{{current_user.username}}</li>
-                    <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
-                    <li style=" color: maroon; "><a href="{{url_for('auth.logout')}}"  >Sign out</a></li>
-                    {% else %}
-                    <li><a href="{{url_for('auth.login')}}">Sign in</a></li>
-                    {%endif%}
-                  </ul>
+                <li><a class="btn btn-outline info" href="/"> Home </a></li>
+
+
+                <li>
+                    <a class="btn btn-outline info" href=" {{url_for( 'main.api')}} ">API</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if current_user.is_authenticated %}
+                <li style="color:white;padding:15px;">{{current_user.username}}</li>
+                <li><a href="{{url_for('main.profile',uname=current_user.username)}}">Profile</a></li>
+                <li style=" color: maroon; "><a class="btn btn-outline info" href="{{url_for('auth.logout')}}">Sign out</a></li>
+                {% else %}
+                <li>
+                    <a class="btn btn-outline info" href=" {{url_for( 'auth.login')}} ">Sign in</a></li>
+                {%endif%}
+            </ul>
         </div>
-        <link rel="stylesheet" href="../static/css/navbar.css">
+        <link rel="stylesheet " href="../static/css/navbar.css ">
     </div>
 </div>
