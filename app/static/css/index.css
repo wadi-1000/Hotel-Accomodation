@@ -44,8 +44,8 @@
 }
 
 .card img {
-    width: 500px;
-    height: 600px;
+    width: 380px;
+    height: 500px;
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -55,7 +55,8 @@
 }
 
 .wraper {
-    background-color: rgb(240, 235, 235);
+    background-color: rgba(204, 220, 224);
+
 }
 
 .card-body {
