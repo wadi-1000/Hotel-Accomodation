@@ -4,7 +4,8 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://kinyae:kinyae@localhost/trainers'
     UPLOAD_PHOTOS_DEST ='app/static/photos'
-    
+    EXERCISE_API_BASE_URL ='https://wger.de/api/v2/exerciseinfo/?format=json'
+
     #email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
     MAIL_PORT = 587

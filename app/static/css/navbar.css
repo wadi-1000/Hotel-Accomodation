@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Besley&display=swap');
 .container-fluid {
     font-family: 'Besley', serif;
-    color: rgb(250, 249, 249) !important;
+    color: #faf9f9 !important;
 }
 
 .navbar {
-    background-color: #161616;
+
+    background-color: darkslategray;
     font-family: 'Besley', serif;
     padding: 30px;
 }
@@ -15,4 +16,21 @@
     font-weight: bold;
     font-size: 25px;
     color: rgb(255, 254, 254);
+}
+#link{
+    color:rgb(209, 208, 208);
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+
+}
+
+#link:a:hover{
+    color:black;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: bold;
+    background-color: grey;
+    
+
 }

@@ -2,4 +2,4 @@ virtual/
 __pycache__/
 flask_session/
 *.pyc
-
+instance/
