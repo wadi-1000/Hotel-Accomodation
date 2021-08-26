@@ -3,14 +3,15 @@
     {% for exercises in exercises_list %}
     <div class="card">
 
-    <div class="col-md-5" >
-        <strong style="color: rgb(73, 71, 71);">{{exercises.name}}</strong>
+    <div>
+        <strong style="color: rgb(73, 71, 71);">name:{{exercises.name}}</strong>
         </div>
-        <div class="col-md-7">
-        <p><em>{{exercises.description}}</em></p>
-        <p> category: {{exercises.category}}</p>
-        <p> category: {{exercises.muscles}}</p>
-        <p> category: {{exercises.equipment}}</p>
+        <div>
+        <p><em>description:{{exercises.description | safe}}</em></p>
+        <p> category: {{exercises.category.name |safe}}</p>
+        <p> author: {{exercises.license_author |safe}}</p>
+        <p> date created: {{exercises.creation_date |safe}}</p>
+        
         <br><br>
     </div>
     {% endfor %}

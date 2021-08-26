@@ -47,13 +47,14 @@ class ExerciseInfo:
     '''
     Exercise info class to define exercise objects
     '''
-    def __init__(self,id,name,description,category,muscles,equipment):
+    def __init__(self,id,name,description,category,license_author,creation_date):
         self.id = id
-        self.title = title
+        self.name = name
         self.description = description
         self.category = category
-        self.muscles = muscles
-        self.equipment = equipment
+        self.license_author = license_author
+        self.creation_date = creation_date
+        
 
        
 

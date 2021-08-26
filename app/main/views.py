@@ -5,6 +5,7 @@ from ..models import  User,Role
 from .forms import UpdateProfile
 from .. import db,photos
 import markdown2
+from ..requests import get_exercises
 
 
 @main.route('/')

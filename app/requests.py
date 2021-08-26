@@ -2,11 +2,12 @@ import urllib.request,json
 
 from .models import ExerciseInfo
 
-exrcise_base_url = None
+exrcise_base_url = 'https://wger.de/api/v2/exerciseinfo/?format=json'
 
-def cofigure_request(app):
-    global exrcise_base_url
-    exrcise_base_url = app.config["EXERCISE_API_BASE_URL"]
+
+# def cofigure_request(app):
+#     global exrcise_base_url
+#     exrcise_base_url = app.config["EXERCISE_API_BASE_URL"]
 
 def get_exercises():
     '''
@@ -25,8 +26,9 @@ def get_exercises():
 
     return exercise_results
 
-def exercise_results(exercise_list):
-     '''
+
+def process_exercises(exercise_list):
+    '''
     Function that processes the exercise result and transform them to a list of objects
 
     Args:
@@ -41,10 +43,11 @@ def exercise_results(exercise_list):
         name = exercise_item.get('name')
         description = exercise_item.get('description')
         category = exercise_item.get('category')
-        muscles = exercise_item.get('muscles')
-        equipment = exercise_item.get('equipment')
+        license_author = exercise_item.get('license_author')
+        creation_date = exercise_item.get('creation_date')
+      
 
-        exercise_object =ExerciseInfo(id,name,description,category,muscles,equipment)
+        exercise_object =ExerciseInfo(id,name,description,category,license_author,creation_date)
         exercise_results.append(exercise_object)
     
     return exercise_results
