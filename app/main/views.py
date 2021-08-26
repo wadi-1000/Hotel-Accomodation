@@ -5,13 +5,14 @@ from ..models import  User,Role
 from .forms import UpdateProfile
 from .. import db,photos
 import markdown2
+from ..requests import get_exercises
 
 
 @main.route('/')
 def index():
 
-    
-    return render_template('index.html')
+    title = 'My Trainer'
+    return render_template('index.html', title = title)
 
 
 @main.route('/user/<uname>')
@@ -51,5 +52,12 @@ def update_pic(uname):
         path = f'photos/{filename}'
         user.profile_pic_path = path
         db.session.commit()
-    return redirect(url_for('main.profile',uname=uname))    
+    return redirect(url_for('main.profile',uname=uname))  
+
+@main.route('/api')
+def api():
+    exercises = get_exercises()
+    print(exercises)
+    title ='My Trainer'
+    return render_template('api.html', title = title , exercises = exercises)  
 

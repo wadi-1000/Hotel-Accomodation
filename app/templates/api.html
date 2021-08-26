@@ -1,0 +1,14 @@
+{% extends 'base.html'%} {% import 'macros.html' as macro %}{% block content %}
+<div class="row">
+    <div class="container_fluid" id="list">
+        <div class="column">
+        
+<h2 class="text-center">TRY OUT ANY OF THESE EXERCISES</h2>
+<ul>
+   {{ macro.displayExercisesList(exercises)}}
+    
+</ul>
+    
+    </div>
+    </div>
+</div>{% endblock%}
