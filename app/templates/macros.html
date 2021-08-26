@@ -1,12 +1,14 @@
 {% macro displayExercisesList(exercises_list) %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/macros.css')}}">
 
     {% for exercises in exercises_list %}
-    <div class="container">
+    <div class="containe">
 
-    <div>
-        <strong style="color: rgb(73, 71, 71);">name:{{exercises.name}}</strong>
+    <div class="container">
+        <mark> <strong style="color: rgb(73, 71, 71);"> Exercise name:{{exercises.name}}</strong></mark>
         </div>
-        <div>
+        <hr>
+        <div class="exercise">
         <p><em>description:{{exercises.description | safe}}</em></p>
         <p> category: {{exercises.category.name |safe}}</p>
         <p> author: {{exercises.license_author |safe}}</p>
